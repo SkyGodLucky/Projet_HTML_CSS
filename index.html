@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page d'accueil</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+  <header>
+    <h1>
+      <a class="lien_dev" href="./index.html">
+        <img class="logo_dev_img" src="./assets/images/logo_dev.png" alt="logo developpeur" />
+      </a>
+    </h1>
+    <nav class="header_nav">
+      <div class="header_nav_close" onclick="closeMenuMobile()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <ul class="header_nav_menu">
+        <li>
+          <a class="header_nav_menu_link" href="./index.html">ACCUEIL</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./pages/HTML_explique.html">HTML</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./pages/CSS_explique.html">CSS</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./pages/JS_explique.html">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a id="lien_contact" class="header_nav_menu_link" href="./pages/contact.html">NOUS CONTACTER</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_burger" onclick="openMenuMobile()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueilIntro">
+      <div class="acueil_intro_présentation">
+        <h2>Le Développement Web</h2>
+        <p>
+          Ce site à pour but de présenter les différentes facettes du métier
+          de développeur Web mais aussi quelques technologies individuelles à
+          sa disposition pour accomplir ses objectifs au quotidien.
+        </p>
+      </div>
+      <div class="intro_img">
+        <a href="./assets/images/dev_gif.gif" target="_blank">
+          <img src="./assets/images/dev_gif.gif" alt="gif de developpement web" />
+        </a>
+      </div>
+    </section>
+
+    <section id="accueilPresentation">
+      <h2>Le Métier de développeur Web</h2>
+      <div class="dev_def">
+        <article class="dev_def_article">
+          <h3>Qu'est ce qu'un développeur Web ?</h3>
+          <p>
+            Un développeur web est chargé de la conception de sites internet,
+            d’applications ou de programmes informatiques répondant à une
+            problématique précise, à la demande des entreprises ou des
+            particuliers. Le domaine de l’informatique étant en mouvement
+            perpétuel, le développeur web à la charge de sans cesse renouveler
+            ses compétences afin de les actualiser selon la réalité du marché.
+            Le développeur endosse également une casquette de technicien
+            informatique une fois le projet terminé. En effet, il doit assurer
+            une maintenance constante afin de garantir au client la bonne
+            conformité du produit.
+          </p>
+        </article>
+        <div class="dev_def_img">
+          <a href="./assets/images/dev_schema.jpg" target="_blank">
+            <img src="./assets/images/dev_schema.jpg" alt="schema du metier de developpeur" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_ent">
+        <article class="dev_ent_article">
+          <h3>Quel est le rôle d’un développeur web dans une entreprise ?</h3>
+          <p>
+            Le rôle d’un développeur web est d’abord d’analyser les besoins
+            d’un client et de déterminer l’ergonomie la plus adaptée à ses
+            désirs. Pour ce faire, il va mettre au point les fonctionnalités
+            du programme en utilisant des lignes de codes et les différents
+            langages de développement web (JAVA, PHP, SQL…). La mise en
+            chantier s’effectuera selon un cahier des charges précis, établi
+            par un chef de projet. En plus de l’aspect créatif, il porte la
+            responsabilité de tester son propre programme et d’en corriger les
+            failles selon les retours clients.
+          </p>
+        </article>
+        <div class="dev_ent_img first_order">
+          <a href="./assets/images/dev_generique.jpg" target="_blank">
+            <img src="./assets/images/dev_generique.jpg" alt="image developpeur générique" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_salaire">
+        <article class="dev_salaire_article">
+          <h3>Quel est le salaire d’un développeur web ?</h3>
+          <p>
+            En début de carrière, la rémunération d’un développeur web varie
+            entre 35 000 et 45 000 euros brut par an selon la taille de
+            l’entreprise. Cela représente à peu près 3300 euros brut par mois,
+            soit un taux horaire compris entre 19 et 25 euros. Selon la taille
+            de l’entreprise, son expérience et les langages informatiques
+            qu’il maîtrise, son salaire peut considérablement évoluer. A mi
+            parcours, il peut toucher environ 50 000 euros brut annuel
+            (environs 4200 euros net) et en fin de carrière, on estime la
+            rémunération brute à 65 000 euros brut par an ( 5500 euros net)
+            soit un taux horaire de 35 euros de l’heure. Bien entendu, toutes
+            ces données sont comptabilisées sans prendre en compte le 13ème
+            mois, les primes et les diverses participations de l’entreprise.
+          </p>
+        </article>
+        <div class="dev_salaire_img">
+          <a href="./assets/images/dev_salaire.png" target="_blank">
+            <img src="./assets/images/dev_salaire.png" alt="image salaire" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_carriere">
+        <article class="dev_carriere_article">
+          <h3>
+            Quelles sont les évolutions de carrière d’un développeur web ?
+          </h3>
+          <p>
+            Le développement du secteur numérique offre de plus en plus
+            d’opportunités de carrière pour les développeurs web. Ceux-ci
+            peuvent proposer leurs services à de nombreux types de sociétés
+            tel que des cabinets de conseil informatique, des éditeurs de site
+            ou même des agences web de communication. L’offre est foisonnante
+            et les possibilités d’évolution nombreuses. Tout au long du
+            parcours, l’ emploi de développeur peut prendre d’autres forme et
+            évoluer vers de nouvelles opportunités, tel que :
+          </p>
+          <ul>
+            <li>Expert en sécurité informatique</li>
+            <li>Développeur de logiciel</li>
+            <li>Infographiste</li>
+            <li>Architecte technique</li>
+            <li>Ingénieur télécom et réseaux</li>
+            <li>Webmaster</li>
+            <li>Intégrateur</li>
+          </ul>
+        </article>
+        <div class="dev_carriere_img first_order">
+          <a href="./assets/images/dev_carriere.jpg" target="_blank">
+            <img src="./assets/images/dev_carriere.jpg" alt="illustration carrière" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_types">
+        <article class="dev_types_article">
+          <h3>
+            A quels autres types de métiers peut prétendre un développeur web
+            ?
+          </h3>
+          <p>
+            Le domaine de l’informatique étant très vaste, le développeur web
+            peut prétendre à d’autres emploi avec le même socle d’études. En
+            voici une liste non exhaustive :
+          </p>
+          <ul>
+            <li>Analyste programmeur</li>
+            <li>Informaticien de développement</li>
+            <li>Ingénieur d’étude et développement informatique</li>
+            <li>Développeur front-end</li>
+            <li>Développeur back-end</li>
+            <li>Développeur fullstack</li>
+            <li>Ingénieur développement logiciel</li>
+            <li>Développeur nouvelles technologies</li>
+          </ul>
+        </article>
+        <div class="dev_types_img">
+          <a href="./assets/images/dev_types.png" target="_blank">
+            <img src="./assets/images/dev_types.png" alt="image type de développeur" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_why">
+        <article class="dev_why_article">
+          <h3>Pourquoi travailler en tant que développeur web ?</h3>
+          <p>
+            Le métier de développeur possèdes de nombreux atouts qui en font
+            un emploi jouissant d’une très belle dynamique :
+          </p>
+          <ul>
+            <li>
+              Le poste peut se pratiquer en totale autonomie. Ainsi il est
+              fortement possible de l’exercer en Freelance ou en télétravail
+            </li>
+            <li>
+              Face au développement des nouvelles technologies, la demande en
+              développement Web est constante. Ainsi, c’est un secteur qui ne
+              souffre aucunement du chômage. En fin de cursus, l’employabilité
+              est garantie.
+            </li>
+            <li>
+              C’est un métier qu’on qualifie de “métier passion”. Nombre
+              d’étudiants se lancent dans l’aventure de la programmation web
+              par goût de la culture informatique. C’est un moyen d’allier
+              l’utile à l’agréable en faisant d’un hobby un métier
+              épanouissant et rémunérateur.
+            </li>
+            <li>
+              Comme beaucoup de métiers en forte demande, les salaires
+              proposés sont très intéressants. Même s’ils ne sont pas
+              mirobolant des l’embauche, les évolutions sont rapides et les
+              augmentations salariales très significatives. De plus, les
+              employeurs proposent en grande majorité des CDI. Beaucoup plus
+              que la plupart des autres secteurs. C’est l’assurance d’un
+              emploi stable, avec de nombreuses possibilités d’évolution. Pour
+              les profils les plus indépendants, de nombreux postes en
+              freelance sont à pourvoir, permettant ainsi de travailler en
+              autonomie totale.
+            </li>
+          </ul>
+        </article>
+        <div class="dev_why_img first_order">
+          <a href="./assets/images/dev_travail.webp" target="_blank">
+            <img src="./assets/images/dev_travail.webp" alt="photo travail plein air" />
+          </a>
+        </div>
+      </div>
+      <div class="dev_qual">
+        <article class="dev_qual_article">
+          <h3>
+            Quelles sont les qualités et compétences nécessaires pour être
+            développeur web ?
+          </h3>
+          <p>
+            Le métier de développeur web nécessite la maîtrise de multiples
+            compétences et d’outils informatiques complexes. Les missions y
+            sont nombreuses et variées et promettent un emploi jamais
+            routinier. Voici un aperçu non exhaustif des caractéristiques
+            necessaire pour reussir dans le domaine :
+          </p>
+          <ul>
+            <li>
+              Savoir être curieux, avoir un atrait pour la nouveauté et
+              l’inantendu.
+            </li>
+            <li>Posséder une connaissance du web et de ses tendances.</li>
+            <li>
+              Connaitres les différents langage de codage et de développement
+              web.
+            </li>
+            <li>Faire preuve de rigueur, d’endurance et d’autonomie.</li>
+            <li>Savoir être réactif et polyvalent.</li>
+            <li>
+              Etre à l’aise dans le relation client et savoir écouter ses
+              besoins.
+            </li>
+            <li>Savoir faire preuve de bonne paresse.</li>
+          </ul>
+          <p>
+            La capacité d’adaptation est une des règles de ce métier.
+            L’environnement se renouvelle en permanence et un développeur doit
+            rester toujours alerte sur les tendances et les nouveautés
+            concernant le développement. C’est un état de veille indispensable
+            pour ne pas être lésé professionnellement.
+          </p>
+        </article>
+        <div class="dev_qual_img">
+          <a href="./assets/images/dev_competences.jpg" target="_blank">
+            <img src="./assets/images/dev_competences.jpg" alt="illustration compétences" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_lien">
+      <a class="logo_dev" href="./index.html">
+        <img class="logo_dev_img" src="./assets/images/logo_dev.png" alt="logo developpeur" /></a>
+    </div>
+  </footer>
+</body>
+
+</html>

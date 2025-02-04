@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+    <header>
+        <h1>
+            <a class="lien_dev" href="../index.html">
+                <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+            </a>
+        </h1>
+        <nav class="header_nav">
+            <div class="header_nav_close" onclick="closeMenuMobile()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <ul class="header_nav_menu">
+                <li><a class="header_nav_menu_link" href="../index.html">ACCUEIL</a></li>
+                <li><a class="header_nav_menu_link" href="./HTML_explique.html">HTML</a></li>
+                <li><a class="header_nav_menu_link" href="./CSS_explique.html">CSS</a></li>
+                <li><a class="header_nav_menu_link" href="./JS_explique.html">JAVASCRIPT</a></li>
+                <li><a id="lien_contact" class="header_nav_menu_link" href="./contact.html">NOUS CONTACTER</a></li>
+            </ul>
+        </nav>
+        <div class="header_burger" onclick="openMenuMobile()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <div class="all_form">
+                <section id="formulaire">
+                    <h2>Formulaire de contact</h2>
+
+                    <div class="nom_prenom">
+                        <div class="name">
+                            <label for="name"> <strong>Nom</strong></label>
+
+                            <input id="name" type="text">
+                        </div>
+                        <div class="fname">
+                            <label for="fname"> <strong>Prénom</strong></label>
+
+                            <input id="fname" type="text">
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <label for="email">
+                            <strong>Mail</strong>
+                        </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="object">
+                        <label for="object"> <strong>Object</strong></label>
+
+                        <input id="other" type="text">
+                    </div>
+                    <div class="message">
+                        <label for="message">
+                            <strong>Message</strong>
+                        </label>
+                        <textarea name="message" id="message" rows="10">
+                    </textarea>
+                    </div>
+                    <div class="send">
+                        <input type="button" value="ENVOYER LE MESSAGE" onclick="openPopup(
+                        )">
+                    </div>
+                </section>
+                <div class="overlay_popup" onclick="closePopup()"></div>
+                <article class="popup" id="popup">
+                    <div class="popup_img">
+                        <img src="../assets/images/verifier.png" alt="logo message envoyé">
+                    </div>
+                    <h2>Merci !</h2>
+                    <p>Votre message a été envoyé avec succés. Merci!</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </article>
+            </div>
+        </form>
+        <section id="Contact">
+            <h2>Contact</h2>
+            <div class="description_contact">
+                <p>Pour toutes questions sur les différents aspects, contactez nous.</p>
+            </div>
+            <div class="box_contact">
+                <article class="adresse">
+                    <div class="img_lien_contact">
+                        <img src="../assets/images/contact_adresse.png" alt="logo adresse">
+                    </div>
+                    </a>
+                    <h3>ADRESSE</h3>
+                    <p>85 avenue Georges Pompidou, <br>13380 Plan-de-Cuques
+                    </p>
+                </article>
+                <article class="email">
+                    <div class="img_lien_contact">
+                        <img src="../assets/images/contact_mail.png" alt="logo email">
+                    </div>
+                    </a>
+                    <h3>EMAIL</h3>
+                    <p>sebastien.pollion@outlook.fr
+                    </p>
+                </article>
+                <article class="telephone">
+                    <div class="img_lien_contact">
+                        <img src="../assets/images/contact_tel.png" alt="logo telephone">
+                    </div>
+                    </a>
+                    <h3>TELEPHONE</h3>
+                    <p>06.38.36.17.95
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_lien">
+            <a class="logo_dev" href="../index.html">
+                <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur">
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+  <header>
+    <h1>
+      <a class="lien_dev" href="../index.html">
+        <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+      </a>
+    </h1>
+    <nav class="header_nav">
+      <div class="header_nav_close" onclick="closeMenuMobile()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <ul class="header_nav_menu">
+        <li><a class="header_nav_menu_link" href="../index.html">ACCUEIL</a></li>
+        <li><a class="header_nav_menu_link" href="./HTML_explique.html">HTML</a></li>
+        <li><a class="header_nav_menu_link" href="./CSS_explique.html">CSS</a></li>
+        <li><a class="header_nav_menu_link" href="./JS_explique.html">JAVASCRIPT</a></li>
+        <li><a id="lien_contact" class="header_nav_menu_link" href="./contact.html">NOUS CONTACTER</a></li>
+      </ul>
+    </nav>
+    <div class="header_burger" onclick="openMenuMobile()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="cssIntroduction">
+      <div class="css_intro_presentation">
+        <h2>Les bases des CSS</h2>
+        <p>
+          Les CSS (Cascading Style Sheets en anglais, ou « feuilles de style
+          en cascade ») sont le code utilisé pour mettre en forme une page
+          web. Les bases des CSS présentent ce qu'il faut savoir pour
+          commencer. Nous répondrons à des questions comme : Comment rendre
+          mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel
+          endroit de l'écran ? Comment décorer ma page web avec une image ou
+          une couleur d'arrière-plan ?. Afin de mieux comprendre ce langage,
+          voici une vidéo d'introduction aux bases du CSS.
+        </p>
+      </div>
+      <div class="css_intro_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tSVvJVE6xI0?si=OKDSy-x9Z5EjP5sJ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section id="cssPresentation">
+      <h2>
+        Le CSS est un complément au langage HTML, mais à quoi correspond t-il
+        réellement ?
+      </h2>
+      <div class="css_hist">
+        <article class="css_hist_article">
+          <h3>Historique du langage CSS</h3>
+          <p>
+            Le CSS ou Cascading Style Sheets,feuilles de style en cascade est
+            un langage informatique qui sert à décrire la présentation des
+            documents HTML. Introduit au milieu des années 1990, Il est
+            aujourd’hui couramment utilisé dans la conception de sites web et
+            bien pris en charge par les navigateurs. Fin 2011, le CSS3 est
+            implémenté par les navigateurs et est perçu comme une très grande
+            avancée. Contrairement à ses prédécesseurs, ce niveau est
+            dévelloppé par modules, permettant ainsi aux navigateurs
+            d’implémenter des sous-ensembles de CSS3. Le CSS1 est donc
+            développé pour etre un sous-ensemble de CSS2, qui est lui-meme
+            développé pour etre un sous-ensemble de CSS3.
+          </p>
+        </article>
+        <div class="css_hist_img">
+          <a href="../assets/images/CSS_logo_css3.png" target="_blank">
+            <img src="../assets/images/CSS_logo_css3.png" alt="logo css" />
+          </a>
+        </div>
+      </div>
+      <div class="css_obj">
+        <article class="css_obj_article">
+          <h3>Objectif et utilité du CSS</h3>
+          <p>
+            L’un des objectifs majeurs du CSS est de permettre l’élaboration
+            de la mise en forme hors des documents HTML. <br />
+            Il est par exemple possible de ne décrire que la structure d’un
+            document en HTML, et de décrire toute la présentation dans une
+            feuille de style CSS séparée. <br />
+            Cette séparation entre HTML et CSS permet un changement de
+            présentation grandement facilité mais également une réduction
+            notable de la complexité de l’architecture d’un document. <br />
+            Cependant, les avantages des feuilles de style sont multiples :
+          </p>
+          <ul>
+            <li>
+              La structure du document et la présentation sont gérés dans des
+              fichiers séparés.
+            </li>
+            <li>
+              La conception d’un document se fait dans un premier temps sans
+              se soucier de la présentation, ce qui permet d’etre plus
+              efficace.
+            </li>
+            <li>
+              Un meme document peut donner le choix entre plusieurs feuilles
+              de style, par exemple une pour l’impression et une pour la
+              lecture à l’écran.
+            </li>
+            <li>
+              Le code HTML est considérablement réduit en taille et en
+              complexité, puisqu’il ne contient plus de balises ni d’attributs
+              de présentation.
+            </li>
+            <li>
+              La modification du style d’un élément, dans une feuille de style
+              CSS, se répercute automatique à toutes les pages HTML qui y sont
+              rattachées.
+            </li>
+          </ul>
+        </article>
+        <div class="css_obj_img first_order">
+          <a href="../assets/images/CSS_objectif.webp" target="_blank">
+            <img src="../assets/images/CSS_objectif.webp" alt="image css générique" />
+          </a>
+        </div>
+      </div>
+      <div class="css_fonct">
+        <article class="css_fonct_article">
+          <h3>Le fonctionnement de CSS</h3>
+          <p>
+            Le CSS fonctionne par une série de règles et de sélecteurs
+            appliquées aux balises HTML de votre document. Les règles sont
+            écrites entre accolades et définissent un ensemble de propriétés
+            et valeurs qui seront appliquées au contenu correspondant. <br />
+            De ce fait, nous pouvons choisir un ou plusieurs sélecteurs et
+            leurs attribuer des règles spécifiques de mise en page ou autre
+            afin de donner un rendu satisfaisant à notre HTML. On peut, par
+            exemple, au sein d'un sélecteur &lt;p&gt;, modifier la largeur du
+            sélecteur, la couleur du texte présent à l'intérieur et même lui
+            appliquer une bordure.
+          </p>
+        </article>
+        <div class="css_fonct_img">
+          <a href="../assets/images/css_exemple.png" target="_blank">
+            <img src="../assets/images/css_exemple.png" alt="expemple css" />
+          </a>
+        </div>
+      </div>
+      <div class="css_box">
+        <article class="css_box_article">
+          <h3>Boîtes, boîtes, encore et toujours des boîtes</h3>
+          <p>
+            Vous verrez rapidement qu'avec les CSS, tout tourne autour de
+            boîtes : définir leurs tailles, leurs couleurs, leurs positions,
+            etc. Les éléments HTML d'une page peuvent, pour la plupart, être
+            vus comme des boîtes placées les unes sur les autres. <br />
+            C'est pour cette raison que l'architecture de CSS est
+            principalement basée sur un modèle de boîtes. Chacun de ces blocs
+            prend un certain espace sur la page, par exemple, de cette façon :
+          </p>
+          <ul>
+            <li>
+              padding, l'espace autour, proche du contenu (par exemple,
+              l'espace autour du texte d'un paragraphe) (en français, on
+              pourrait traduire cela par du « remplissage » mais le terme
+              padding étant communément utilisé lorsqu'on parle de CSS)
+            </li>
+            <li>
+              border, la ligne qui est juste autour du padding (en français
+              cela correspond à la bordure)
+            </li>
+            <li>
+              margin, l'espace extérieur, autour de l'élément (en français
+              cela correspond à la marge)
+            </li>
+            <li>width, la largeur de l'élément</li>
+            <li>
+              background-color, la couleur derrière le contenu de l'élément et
+              son padding
+            </li>
+            <li>
+              color, la couleur du contenu de l'élément (généralement du
+              texte)
+            </li>
+            <li>display, définit le mode d'affichage d'un élément</li>
+          </ul>
+        </article>
+        <div class="css_box_img first_order">
+          <a href="../assets/images/css_boxes.jpg" target="_blank">
+            <img src="../assets/images/css_boxes.jpg" alt="image boites" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="cssGlossaire">
+      <h2>Glossaire</h2>
+      <article class="table_form_txt">
+        <h3>Propriétés de mise en forme du texte</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>font-family</strong></td>
+            <td>
+              police1,<br />
+              police2,<br>
+              police3,<br>
+              serif,<br>
+              sans-serif,<br>
+              monospace,<br>
+              etc.
+            </td>
+            <td>Nom de police</td>
+          </tr>
+          <tr>
+            <td><strong>@font-face</strong></td>
+            <td>
+              Nom et source de police
+            </td>
+            <td>Police personnalisée</td>
+          </tr>
+          <tr>
+            <td><strong>font-size</strong></td>
+            <td>
+              1.3em,<br>
+              16px,<br>
+              120%,<br>
+              etc.
+            </td>
+            <td>Taille du texte</td>
+          </tr>
+          <tr>
+            <td><strong>font-weight</strong></td>
+            <td>
+              bold,<br>
+              normal.
+            </td>
+            <td>Gras</td>
+          </tr>
+          <td><strong>font-style</strong></td>
+          <td>
+            italic,<br>
+            oblique,<br>
+            normal.
+          </td>
+          <td>Italique</td>
+          </tr>
+          <td><strong>text-decoration</strong></td>
+          <td>
+            underline,<br>
+            overline,<br>
+            line-through,<br>
+            blink,<br>
+            none.
+          </td>
+          <td>Soulignement, ligne au-dessus, barré ou clignotant</td>
+          </tr>
+          <td><strong>font-variant</strong></td>
+          <td>
+            small-caps,<br>
+            normal.
+          </td>
+          <td>Petite capitales</td>
+          </tr>
+          <td><strong>text-transform</strong></td>
+          <td>
+            capitalize,<br>
+            lowercase,<br>
+            uppercase.
+          </td>
+          <td>Capitales</td>
+          </tr>
+          <td><strong>font</strong></td>
+          <td>
+            -
+          </td>
+          <td>Super-propriété de police qui combine: font-weight, font-style, font-size, font-variant, font-family</td>
+          </tr>
+          <td><strong>text-align</strong></td>
+          <td>
+            left,<br>
+            center,<br>
+            right,<br>
+            justify.
+          </td>
+          <td>Alignement horizontal</td>
+          </tr>
+          <td><strong>vertical-align</strong></td>
+          <td>
+            baseline,<br>
+            middle, sub,<br>
+            super, top, <br>
+            bottom
+          </td>
+          <td>Alignement vertical (cellules de tableau ou éléments inline-block uniquement)</td>
+          </tr>
+          <td><strong>line-height</strong></td>
+          <td>
+            18px,<br>
+            120%,<br>
+            normal,<br>
+            etc.
+          </td>
+          <td>Hauteur de ligne</td>
+          </tr>
+          <td><strong>text-indent</strong></td>
+          <td>
+            25px
+          </td>
+          <td>Alinéa</td>
+          </tr>
+          <td><strong>white-space</strong></td>
+          <td>
+            pre,<br>
+            nowrap,<br>
+            normal.
+          </td>
+          <td>Césure</td>
+          </tr>
+          <td><strong>word-wrap</strong></td>
+          <td>
+            break-word,<br>
+            normal.
+          </td>
+          <td>Césure forcée</td>
+          </tr>
+          <td><strong>text-shadow</strong></td>
+          <td>
+            5px 5px 2px blue (horizontale, verticale, fondu, couleur)
+          </td>
+          <td>Ombre de texte</td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h3>Propriétés de couleur et de fond</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>color</strong></td>
+            <td>
+              nom, RGB (rouge, vert,bleu), RGBA (rouge, vert, bleu, transparance), #CF1A20
+            </td>
+            <td>Couleur du texte</td>
+          </tr>
+          <tr>
+            <td><strong>background-color</strong></td>
+            <td>
+              nom, RGB (rouge, vert,bleu), RGBA (rouge, vert, bleu, transparance), #CF1A20
+            </td>
+            <td>Couleur de fond</td>
+          </tr>
+          <tr>
+            <td><strong>background-image</strong></td>
+            <td>
+              url ('image.png')
+            </td>
+            <td>Image de fond</td>
+          </tr>
+          <tr>
+            <td><strong>background-attachement</strong></td>
+            <td>
+              fixed,<br>
+              scroll.
+            </td>
+            <td>Fond fixe</td>
+          </tr>
+          <tr>
+            <td><strong>background-repeat</strong></td>
+            <td>
+              repeat-x,<br>
+              repeat-y,<br>
+              no-repeat,<br>
+              repeat.
+            </td>
+            <td>Répétition du fond</td>
+          </tr>
+          <tr>
+            <td><strong>background-position</strong></td>
+            <td>
+              (x, y),<br>
+              top,<br>
+              center,<br>
+              bottom,<br>
+              left,<br>
+              right.
+            </td>
+            <td>Position du fond</td>
+          </tr>
+          <tr>
+            <td><strong>background</strong></td>
+            <td>
+              -
+            </td>
+            <td>Super-propriété de fond qui combine: <br>
+              background-image,<br>
+              background-repeat,<br>
+              background-attachement,<br>
+              background-position
+            </td>
+          </tr>
+          <tr>
+            <td><strong>opacity</strong></td>
+            <td>
+              0.5
+            </td>
+            <td>Transparance</td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h3>Propriétés des boîtes</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>width</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Largeur</td>
+          </tr>
+          <tr>
+            <td><strong>height</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Hauteur</td>
+          </tr>
+          <tr>
+            <td><strong>min-width</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Largeur minimale</td>
+          </tr>
+          <tr>
+            <td><strong>max-width</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Largeur maximale</td>
+          </tr>
+          <tr>
+            <td><strong>min-height</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Hauteur minimale</td>
+          </tr>
+          <tr>
+            <td><strong>max-height</strong></td>
+            <td>
+              150px,<br>
+              80%,<br>
+              etc.
+            </td>
+            <td>Hauteur maximale</td>
+          </tr>
+          <tr>
+            <td><strong>margin-top</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge en haut</td>
+          </tr>
+          <tr>
+            <td><strong>margin-left</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge à gauche</td>
+          </tr>
+          <tr>
+            <td><strong>margin-right</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge à droite</td>
+          </tr>
+          <tr>
+            <td><strong>margin-bottom</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge en bas</td>
+          </tr>
+          <tr>
+            <td><strong>margin</strong></td>
+            <td>
+              23px 5px 23px 5px <br>
+              (haut, droite, bas, gauche)
+            </td>
+            <td>Super-propriété de marge qui combine: <br>
+              margin-top,<br>
+              margin-right,<br>
+              margin-bottom,<br>
+              margin-left.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>padding-left</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge intérieur à gauche</td>
+          </tr>
+          <tr>
+            <td><strong>padding-right</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge intérieur à droite</td>
+          </tr>
+          <tr>
+            <td><strong>padding-bottom</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge intérieur en bas</td>
+          </tr>
+          <tr>
+            <td><strong>padding-top</strong></td>
+            <td>
+              23px
+            </td>
+            <td>Marge intérieur haut</td>
+          </tr>
+          <tr>
+            <td><strong>padding</strong></td>
+            <td>
+              23px 5px 23px 5px <br>
+              (haut, droite, bas, gauche)
+            </td>
+            <td>Super-propriété de marge qui combine: <br>
+              padding-top,<br>
+              padding-right,<br>
+              padding-bottom,<br>
+              padding-left.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>border-width</strong></td>
+            <td>
+              3px
+            </td>
+            <td>Epaisseur de bordure</td>
+          </tr>
+          <tr>
+            <td><strong>border-color</strong></td>
+            <td>
+              nom, RGB (rouge, vert, bleu), RGBA (rouge, vert, bleu, transparance), #CF1A20
+            </td>
+            <td>Couleur de bordure</td>
+          </tr>
+          <tr>
+            <td><strong>border-style</strong></td>
+            <td>
+              solid, dotted,<br>
+              dashed,<br>
+              double,<br>
+              groove, ridge,<br>
+              inset, outset.
+            </td>
+            <td>Type de bordure</td>
+          </tr>
+          <tr>
+            <td><strong>border</strong></td>
+            <td>
+              3px solid black
+            </td>
+            <td>Super-propriété de bordure qui combine: <br>
+              border-width,<br>
+              border-color,<br>
+              border-style. <br>
+              <br>
+              Existe aussi en version: <br>
+              border-top,<br>
+              border-right,<br>
+              border-bottom,<br>
+              border-left.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>border-radius</strong></td>
+            <td>
+              5px
+            </td>
+            <td>Bordure arrondie</td>
+          </tr>
+          <tr>
+            <td><strong>box-shadow</strong></td>
+            <td>
+              6px 6px 0px black <br>
+              (horizontale, verticale, fondu, couleur)
+            </td>
+            <td>Ombre de boîte</td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h3>Propriétés de positionnement et d'affichage</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>display</strong></td>
+            <td>
+              block,<br>
+              inline,<br>
+              inline-block,<br>
+              table,<br>
+              table-cell,<br>
+              none.
+            </td>
+            <td>Type d'élément</td>
+          </tr>
+          <tr>
+            <td><strong>visibility</strong></td>
+            <td>
+              visible,<br>
+              hidden.
+            </td>
+            <td>Visibilité</td>
+          </tr>
+          <tr>
+            <td><strong>clip</strong></td>
+            <td>
+              rect (0px, 60px, 30px, 0px) <br>
+              rect (haut, droite, bas, gauche)
+            </td>
+            <td>Affichage d'une partie de l'élément</td>
+          </tr>
+          <tr>
+            <td><strong>overflow</strong></td>
+            <td>
+              auto,<br>
+              scroll,<br>
+              visible,<br>
+              hidden.
+            </td>
+            <td>Comportement en cas de dépassement</td>
+          </tr>
+          <tr>
+            <td><strong>float</strong></td>
+            <td>
+              left,<br>
+              right,<br>
+              none.
+            </td>
+            <td>Flottant</td>
+          </tr>
+          <tr>
+            <td><strong>clear</strong></td>
+            <td>
+              left,<br>
+              right,<br>
+              both,<br>
+              none.
+            </td>
+            <td>Arrêt d'un flottan</td>
+          </tr>
+          <tr>
+            <td><strong>position</strong></td>
+            <td>
+              relative,<br>
+              absolute,<br>
+              static.
+            </td>
+            <td>
+              Positionnement
+            </td>
+          </tr>
+          <tr>
+            <td><strong>top</strong></td>
+            <td>
+              20px
+            </td>
+            <td>Position par rapport au haut</td>
+          </tr>
+          <tr>
+            <td><strong>bottom</strong></td>
+            <td>
+              20px
+            </td>
+            <td>Position par rapport au bas</td>
+          </tr>
+          <tr>
+            <td><strong>left</strong></td>
+            <td>
+              20px
+            </td>
+            <td>Position par rapport à la gauche</td>
+          </tr>
+          <tr>
+            <td><strong>right</strong></td>
+            <td>
+              20px
+            </td>
+            <td>Position par rapport à la droite</td>
+          </tr>
+          <tr>
+            <td><strong>z-index</strong></td>
+            <td>
+              10
+            </td>
+            <td>Ordre d'affichage en cas de superposition. <br>
+              La plus grande valeur est affichée par dessus les autres.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>list-style-type</strong></td>
+            <td>
+              disc,<br>
+              circle,<br>
+              square,<br>
+              decimal,<br>
+              lower-roman,<br>
+              upper-roman,<br>
+              lower-alpha,<br>
+              uper-alpha,<br>
+              none.
+            </td>
+            <td>Type de liste</td>
+          </tr>
+          <tr>
+            <td><strong>list-style-position</strong></td>
+            <td>
+              inside,<br>
+              outside.
+            </td>
+            <td>Position en retrait</td>
+          </tr>
+          <tr>
+            <td><strong>list-style-image</strong></td>
+            <td>
+              URL ('puce.png')
+            </td>
+            <td>Puce personnalisée</td>
+          </tr>
+          <tr>
+            <td><strong>list-style</strong></td>
+            <td>
+              -
+            </td>
+            <td>Super-propriété de liste qui combine: <br>
+              list-style-type,<br>
+              list-style-position,<br>
+              list-style-image.
+            </td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h3>Propriétés des tableaux</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>border-collapse</strong></td>
+            <td>
+              collapse,<br>
+              separate.
+            </td>
+            <td>Fusion des bordures</td>
+          </tr>
+          <tr>
+            <td><strong>empty-cells</strong></td>
+            <td>
+              hide,<br>
+              show.
+            </td>
+            <td>Affichage des cellules vides</td>
+          </tr>
+          <tr>
+            <td><strong>caption-side</strong></td>
+            <td>
+              bottom,<br>
+              top.
+            </td>
+            <td>Position du titre du tableau</td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h3>Propriétés des tableaux</h3>
+        <table>
+          <tr>
+            <th>Propriété</th>
+            <th>
+              Valeurs <br />
+              (exemples)
+            </th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><strong>cursor</strong></td>
+            <td>
+              crosshair,<br>
+              default, help,<br>
+              move, pointer,<br>
+              progress, text,<br>
+              wait, e-resize,<br>
+              ne-resize,<br>
+              auto,etc.
+            </td>
+            <td>Curseur de souris</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_lien">
+      <a class="logo_dev" href="../index.html">
+        <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

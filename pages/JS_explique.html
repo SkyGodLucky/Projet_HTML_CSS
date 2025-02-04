@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+  <header>
+    <h1>
+      <a class="lien_dev" href="../index.html">
+        <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+      </a>
+    </h1>
+    <nav class="header_nav">
+      <div class="header_nav_close" onclick="closeMenuMobile()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <ul class="header_nav_menu">
+        <li>
+          <a class="header_nav_menu_link" href="../index.html">ACCUEIL</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./HTML_explique.html">HTML</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./CSS_explique.html">CSS</a>
+        </li>
+        <li>
+          <a class="header_nav_menu_link" href="./JS_explique.html">JAVASCRIPT</a>
+        </li>
+        <li>
+          <a id="lien_contact" class="header_nav_menu_link" href="./contact.html">NOUS CONTACTER</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header_burger" onclick="openMenuMobile()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="jsIntroduction">
+      <div class="js_intro_presentation">
+        <h2>JavaScript, l'annimation Web et Web mobile</h2>
+        <p>
+          JavaScript est un langage de programmation qui ajoute de
+          l'interactivité à votre site web (par exemple : jeux, réponses quand
+          on clique sur un bouton ou des données entrées dans des formulaires,
+          composition dynamique, animations). Cet article vous aide à débuter
+          dans ce langage passionnant et vous donne une idée de ses
+          possibilités.
+        </p>
+      </div>
+      <div class="js_intro_video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/v3Ho7QVaTXM?si=vYFxRKbFAoTEAiOW"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section id="jsPresentation">
+      <h2>Qu'est le JavaScript, réellement ?</h2>
+      <div class="js_histoire">
+        <article class="js_histoire_article">
+          <h3>JavaScript, comment le décrire ?</h3>
+          <p>
+            JavaScript (« JS » en abrégé) est un langage de programmation
+            dynamique complet qui, appliqué à un document HTML, peut fournir
+            une interactivité dynamique sur les sites Web. JavaScript est
+            d'une incroyable flexibilité. <br />
+            Vous pouvez commencer petit, avec des carrousels, des galeries
+            d'images, des variations de mises en page et des réponses aux
+            clics de boutons. Avec plus d'expérience, vous serez en mesure de
+            créer des jeux, des graphiques 2D et 3D animés, des applications
+            complètes fondées sur des bases de données et bien plus encore.
+          </p>
+        </article>
+        <div class="js_histoire_img">
+          <a href="../assets/images/js_logo.png" target="_blank">
+            <img src="../assets/images/js_logo.png" alt="logo JavaScript" />
+          </a>
+        </div>
+      </div>
+      <div class="js_role">
+        <article class="js_role_article">
+          <h3>Quel est le rôle de JavaScript ?</h3>
+          <p>
+            JavaScript, abrégé JS, est un langage de programmation créé pour
+            s'adapter à l'évolution des usages du web et des technologies, et
+            pour augmenter leurs possibilités.
+          </p>
+          <ul>
+            <li>
+              En ce qui concerne les technologies, le rôle de JS est de faire
+              communiquer l'homme avec la machine. JavaScript étend le panel
+              de fonctionnalités des logiciels, et contribue à l'essor massif
+              de l'internet des objets.
+            </li>
+            <li>
+              Le rôle de JavaScript est majeur en développement web côté
+              client. Les pages web autrefois majoritairement statiques sont
+              devenues dynamiques et interactives grâce à JavaScript.
+            </li>
+          </ul>
+          <p>
+            Alors que le langage HTML joue un rôle structurant, et que le rôle
+            du langage CSS est en quelque sorte esthétique, JS vise un enjeu
+            d'expérience utilisateur en développement frontend. Animer des
+            images, assigner un comportement dynamique à un élément, intégrer
+            des publications de réseaux sociaux en temps réel, rendre une
+            carte interactive, mettre à jour un contenu en fonction des
+            actions d'un utilisateur ou encore contrôler l'affichage d'une
+            vidéo : JavaScript gère une très large étendue de fonctionnalités
+            d'UX, des plus simples aux plus élaborées. <br />
+            <br />
+            JavaScript, initialement axé frontend, joue désormais un rôle
+            essentiel dans le développement backend également. Les
+            développeurs peuvent donc utiliser ce seul langage de
+            programmation à la fois côté client et côté serveur, pour créer
+            des applications web complexes et puissantes. PayPal, Netflix,
+            Uber et LinkedIn, entre autres, utilisent JavaScript via la
+            plateforme Node.js, en backend et en frontend.
+          </p>
+        </article>
+        <div class="js_role_img first_order">
+          <a href="../assets/images/js_gif_generique.gif" target="_blank">
+            <img src="../assets/images/js_gif_generique.gif" alt="gif JavaScript générique" />
+          </a>
+        </div>
+      </div>
+      <div class="js_avantage">
+        <article class="js_avantage_article">
+          <h3>Avantage de JavaScript</h3>
+          <p>
+            JavaScript est un standard du web. Cela signifie que c'est une
+            technologie dont l'utilisation est recommandée, unifiée, et promue
+            par un organisme de standardisation. Les normes ECMAScript, basées
+            sur JavaScript et régulièrement mises à jour, sont standardisées
+            par l'organisme Ecma International. En tant que standard du web,
+            JavaScript offre l'avantage d'une très grande popularité, tant
+            auprès des navigateurs que des développeurs et des usagers du web.
+            <br />
+            <br />
+            JavaScript est polyvalent. Cet avantage de la polyvalence
+            s'observe à deux égards. En web, le langage de programmation
+            permet de faire du développement à la fois frontend et backend. Et
+            JS ne se résume pas au développement web : IoT et robotique,
+            intelligence artificielle, logiciels ou encore jeux vidéo sont
+            programmés avec du JavaScript. <br />
+            <br />
+            JavaScript est une compétence hautement valorisée sur le marché de
+            l'emploi. Une étude récente révèle à cet égard que JavaScript est
+            la compétence la plus recherchée par les recruteurs dans les
+            entreprises de produits et de services technologiques. C'est en
+            effet un bagage essentiel du développeur web full stack, or ce
+            métier occupe une place prépondérante dans le paysage actuel et à
+            venir.
+          </p>
+        </article>
+        <div class="js_avantage_img">
+          <a href="../assets/images/js_avantage.png" target="_blank">
+            <img src="../assets/images/js_avantage.png" alt="image js universel" />
+          </a>
+        </div>
+      </div>
+      <div class="js_complexe">
+        <article class="js_complexe_article">
+          <h3>Est-ce que JavaScript est difficile ?</h3>
+          <p>
+            Oui, JavaScript est un langage de programmation relativement
+            difficile à maîtriser. Il faut en connaître le jargon, et
+            comprendre sa logique de fonctionnement. Or ni l'un ni l'autre
+            n'est intuitif. Les concepts de variables, d'évènements ou encore
+            de méthodes se rapportent à des notions spécifiques à JS, et s'y
+            familiariser prend du temps. Il faut ensuite savoir écrire le code
+            correctement, en fonction du résultat attendu : il est nécessaire
+            de s'entraîner assidument. Enfin, le langage inclut une longue
+            liste de scripts à maîtriser pour exploiter toutes les
+            fonctionnalités du JavaScript.<br />
+            <br />
+            Apprendre le JavaScript est difficile, en outre, car s'initier aux
+            fondamentaux de base ne suffit pas. Pour pratiquer le JavaScript,
+            en effet, les développeurs web utilisent des outils de
+            l'écosystème JS : frameworks et bibliothèques. Les recruteurs,
+            d'ailleurs, visent directement certaines de ces compétences dans
+            leurs offres d'emploi : la bibliothèque React ou les frameworks
+            Angular et Vue.js, par exemple, constituent des indispensables de
+            l'environnement JS. Si ces outils ont pour objectif de faciliter
+            l'usage du code, il faut préalablement savoir les utiliser. Or
+            leur prise en main nécessite une expertise avancée.
+          </p>
+        </article>
+        <div class="js_complexe_img first_order">
+          <a href="../assets/images/js_gif_difficult.gif" target="_blank">
+            <img src="../assets/images/js_gif_difficult.gif" alt="gif js difficile" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_lien">
+      <a class="logo_dev" href="../index.html">
+        <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

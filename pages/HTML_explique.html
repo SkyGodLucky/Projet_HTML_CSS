@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+    <header>
+        <h1>
+            <a class="lien_dev" href="../index.html">
+                <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur" />
+            </a>
+        </h1>
+        <nav class="header_nav">
+            <div class="header_nav_close" onclick="closeMenuMobile()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <ul class="header_nav_menu">
+                <li><a class="header_nav_menu_link" href="../index.html">ACCUEIL</a></li>
+                <li><a class="header_nav_menu_link" href="./HTML_explique.html">HTML</a></li>
+                <li><a class="header_nav_menu_link" href="./CSS_explique.html">CSS</a></li>
+                <li><a class="header_nav_menu_link" href="./JS_explique.html">JAVASCRIPT</a></li>
+                <li><a id="lien_contact" class="header_nav_menu_link" href="./contact.html">NOUS CONTACTER</a></li>
+            </ul>
+        </nav>
+        <div class="header_burger" onclick="openMenuMobile()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section id="htmlIntroduction">
+            <div class="html_intro_presentation">
+                <h2>HTML, la structure de base d'une page web</h2>
+                <p>Le HTML, ou HyperText Markup Langage sert à coder les pages web, et ce qui caractérise d’abord ces
+                    pages, c’est qu’elles sont reliées entre elles selon le principe des liens hypertextes, ce qui
+                    explique pourquoi on parle d'un « langage d’hypertexte ». Afin de mieux comprendre ce langage, voici
+                    une vidéo d'introduction aux bases du HTML.</p>
+            </div>
+            <div class="html_intro_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jIyI85hOuhc?si=VmrFOg_8xflOma9j"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="htmlPresentation">
+            <h2>Le HTML peut aussi se traduire par « langage de balisage d’hypertexte ». Mais pourquoi parle-t-on d'un
+                langage de « balisage » ?</h2>
+            <div class="html_lang">
+                <article class="html_lang_article">
+                    <h3>Un langage de « balisage »</h3>
+                    <p>Au bord de la mer, des balises flottant sur l’eau peuvent délimiter l’espace en mer d’un chenal à
+                        bateaux. De même, le « balisage » d’une page HTML va <strong>délimiter</strong> et
+                        <strong>structurer</strong> les parties de cette
+                        page, en appliquant à chacune de ces parties diverses <strong>propriétés</strong> qui seront
+                        interprétées de manière
+                        différente par le navigateur selon le type de balises utilisées. Bien sûr, il ne va pas s’agir
+                        ici
+                        de bouées en plastique, mais de chaînes de caractères qui vont délimiter des parties de la page,
+                        des
+                        portions de texte ou des images, pour leur appliquer différentes <strong>propriétés</strong>,
+                        mais
+                        aussi pour les <strong>structurer</strong> les unes par rapport aux autres.
+                    </p>
+                </article>
+                <div class="html_lang_img">
+                    <a href="../assets/images/html_balisage.png" target="_blank">
+                        <img src="../assets/images/html_balisage.png" alt="exemple balisage html">
+                    </a>
+                </div>
+            </div>
+            <div class="html_type">
+                <article class="html_type_article">
+                    <h3>Les différents types de balises</h3>
+                    <p>On distingue des balises <strong>« ouvrantes »</strong>, qui indiquent le début de la portion de
+                        page
+                        web à délimiter,
+                        et des balises <strong>« fermantes »</strong>, qui en indiquent la fin. Les balises ouvrantes
+                        sont
+                        toujours de la
+                        forme <strong>&lt;exemple&gt;
+                        </strong> et les balises fermantes de la forme <strong>&lt;/exemple&gt;</strong> où « exemple »
+                        indique le
+                        nom de la
+                        balise. Tous les éléments du contenu d’une page HTML sont encadrés par une balise ouvrante et
+                        une
+                        balise fermante, à part quelques exceptions dont les plus notables sont la balise
+                        <strong>&lt;br&gt;</strong>, qui permet d’aller à la ligne, la balise
+                        <strong>&lt;img&gt;</strong>
+                        qui permet d’insérer une image dans la page HTML, et les balises <strong>&lt;meta&gt;</strong>
+                        et
+                        <strong>&lt;link&gt;</strong> sur lesquelles je reviendrai plus tard.
+                    </p>
+                </article>
+                <div class="html_type_img first_order">
+                    <a href="../assets/images/html_type_balise.jpg" target="_blank">
+                        <img src="../assets/images/html_type_balise.jpg" alt="type de balise html">
+                    </a>
+                </div>
+            </div>
+            <div class="html_doctype">
+                <article class="html_doctype_article">
+                    <h3>La balise &lt;html&gt; et le doctype</h3>
+                    <p>Les premières balises, entre lesquelles toutes les autres viennent s’insérer, sont la balise
+                        ouvrante
+                        &lt;html&gt;, qui se place au début du fichier juste après le « doctype », et la balise
+                        &lt;/html&gt; qui se place à la fin. <br>
+                        Le « <strong>doctype</strong> », qui constitue la déclaration initiale d’un document HTML,
+                        indique
+                        au navigateur la
+                        version du langage utilisé pour qu’il puisse l’interpréter selon les normes de la version
+                        concernée.
+                        <br>
+                        En effet, depuis ma naissance au début des années 1990, j’ai beaucoup grandi et évolué. Au début
+                        des années 2010, le <strong>HTML5</strong> commence à être utilisé, et sa standardisation
+                        devrait être achevée au milieu des années 2010. <br>
+                        En HTML5, la syntaxe de la déclaration du doctype (qui indique que le document doit être
+                        interprété selon les standards du HTML5) est très simple (comparée aux anciennes déclarations…)
+                        : <br>
+                        &lt;!DOCTYPE html&gt; Tous les fichiers HTML commencent donc par la déclaration du doctype
+                        suivie par la balise ouvrante &lt;html&gt; et ils se terminent tous par la balise fermante
+                        &lt;/html&gt;.
+                    </p>
+                </article>
+                <div class="html_doctype_img">
+                    <a href="../assets/images/html_doctype.png" target="_blank">
+                        <img src="../assets/images/html_doctype.png" alt="Doctype HTML">
+                    </a>
+                </div>
+            </div>
+            <div class="html_bal_first">
+                <article class="html_bal_first_article">
+                    <h3>Les balises de premier niveau</h3>
+                    <p>Entre la balise ouvrante &lt;html&gt; et la balise fermante &lt;/html&gt;, le document est scindé
+                        en deux parties, la tête d’abord, le corps ensuite, délimités par les balises du même nom en
+                        anglais (&lt;head&gt; et &lt;body&gt;).<br>
+                        Le <strong>corps du document</strong>, constitué par le code placé entre les balises
+                        &lt;body&gt;, détermine tout le <strong>contenu visible</strong> par l’internaute à l’intérieur
+                        de la fenêtre du navigateur : les textes, les liens, les images, éventuellement les sons et les
+                        vidéos.<br>
+                        Mais si ton corps est visible, les pensées que tu formes dans ta tête sont invisibles. De même,
+                        les <strong>informations d’en-tête</strong> de ton document contenues entre les balises
+                        &lt;head&gt; ne sont <strong>pas directement visibles</strong> dans la fenêtre du navigateur,
+                        même si certaines d’entre elles ont une incidence sur la manière dont le contenu visible va
+                        s’afficher.
+                    </p>
+                </article>
+                <div class="html_bal_first_img first_order">
+                    <a href="../assets/images/html_first_lvl.png" target="_blank">
+                        <img src="../assets/images/html_first_lvl.png" alt="balise de premier niveau">
+                    </a>
+                </div>
+            </div>
+            <div class="html_bal_tete">
+                <article class="html_bal_tete_article">
+                    <h3>Les balises d'en-tête</h3>
+                    <p>Bien d’autres balises peuvent apparaître entre la balise ouvrante &lt;head&gt; et la balise
+                        fermante &lt;/head&gt;, mais je ne vais pas en parler ici. Je vais simplement citer les
+                        principales au cas où tu voudrais aller plus loin et compléter ce que tu viens d’apprendre en
+                        faisant des recherches ailleurs sur le web :
+                    <ul>
+                        <li>des <strong>balises</strong> &lt;style&gt; contenant des règles de mise en forme des
+                            éléments visibles dans la page</li>
+                        <li>des <strong>balises</strong> &lt;script&gt; contenant des petits programmes (scripts)
+                            destinés à apporter davantage d’animation et d’interactivité (ces scripts sont généralement
+                            écrits en langage JavaScript)</li>
+                        <li>des <strong>balises</strong> &lt;link&gt; pour lier la page HTML à d’autres fichiers (comme
+                            des feuilles de style ou des pages de scripts externes par exemple)</li>
+                        <li>d’autres <strong>balises</strong> &lt;meta&gt; dont le contenu s’adresse aux navigateurs ou
+                            aux robots des moteurs de recherche, avec d’autres attributs que l’attribut « charset »</li>
+                    </ul>
+                    </p>
+                </article>
+                <div class="html_bal_tete_img">
+                    <a href="../assets/images/html_balise_en_tete.png" target="_blank">
+                        <img src="../assets/images/html_balise_en_tete.png" alt="balises d'en-tête">
+                    </a>
+                </div>
+            </div>
+            <div class="html_corps">
+                <article class="html_corps_article">
+                    <h3>Mon corps, ses balises principales</h3>
+                    <p>Parmi les sous-balises principales de la <strong>balise</strong> &lt;body&gt;, la
+                        <strong>balise</strong> &lt;div&gt; constitue le <strong>conteneur</strong> ou la <strong>boîte
+                            de base</strong> pour structurer la page HTML. Ensuite viennent des balises ayant un usage
+                        plus particulier, comme celles permettant l’insertion de texte, d’images et de liens. <br>
+                        Mais avant d’avoir fini de passer en revue toutes ces possibilités, tu vas tout de suite pouvoir
+                        créer ta première page HTML avec la <strong>balise de base</strong> permettant d’<strong>insérer
+                            du texte</strong>, à savoir la balise &lt;p&gt; permettant l’insertion d’un
+                        <strong>paragraphe</strong>. <br>
+                        &lt;p&gt; se place au début d’un paragraphe et &lt;/p&gt; se place à la fin du paragraphe.
+                    </p>
+                </article>
+                <div class="html_corps_img first_order">
+                    <a href="../assets/images/html_corps_balise.png" target="_blank">
+                        <img src="../assets/images/html_corps_balise.png" alt="balise corps">
+                    </a>
+                </div>
+            </div>
+            <div class="html_arbre">
+                <article class="html_arbre_article">
+                    <h3>Une page HTML est comme un arbre</h3>
+                    <p>Les balises HTML <strong>s’imbriquent</strong> les unes dans les autres. Pour exprimer ces
+                        rapports d’imbrication, on emploie souvent la métaphore de <strong>l’arbre
+                            généalogique</strong>. Ainsi, on peut présenter les rapports
+                        qu’entretiennent les balises de ta première page HTML comme des <strong>liens de
+                            parenté</strong>.
+                    </p>
+                    <ul>
+                        <li>Les <strong>ancêtres</strong> d’une balise sont toutes les balises placées plus
+                            <strong>bas</strong> dans les branches de l’arbre par rapport à cette balise, quelque soit
+                            le degré d’éloignement dans l’arborescence et quelque soit le nombre de niveaux
+                            intermédiaires entre elles et cette balise.
+                        </li>
+                        <li>Les <strong>descendantes</strong> d’une balise sont toutes les balises placées plus
+                            <strong>haut</strong> dans les branches de l’arbre par rapport à cette balise, quelque soit
+                            le degré d’éloignement dans l’arborescence et quelque soit le nombre de niveaux
+                            intermédiaires entre elles et cette balise.
+                        </li>
+                        <li>Le <strong>parent</strong> d’une balise est la balise placée directement <strong>en
+                                dessous</strong> d’elle dans l’arbre, celle dans laquelle elle est imbriquée.</li>
+                        <li>L’<strong>enfant</strong> d’une balise est la balise placée directement
+                            <strong>au-dessus</strong> d’elle dans l’arbre, il s’agit d’une balise qu’elle imbrique.
+                        </li>
+                        <li>Les balises <strong>sœurs</strong> sont des balises qui se trouvent au même niveau dans
+                            l’arborescence et ont le <strong>même parent</strong>.</li>
+                    </ul>
+                    <p>Dans ta première page HTML:</p>
+                    <ul>
+                        <li>La balise &lt;html&gt; est <strong>l'ancêtre</strong> de toutes les autres balises et plus
+                            précisément le <strong>parent</strong> des balises &lt;head&gt; et &lt;body&gt;.</li>
+                        <li>Les balises &lt;head&gt; et &lt;body&gt; sont les <strong>enfants</strong> de la balise
+                            &lt;html&gt;.</li>
+                        <li>La balise &lt;head&gt; est le <strong>parent</strong> des balises &lt;meta&gt; et
+                            &lt;title&gt;.</li>
+                        <li>Les balises &lt;meta&gt; et &lt;title&gt; sont des balises sœurs. Elles sont les
+                            <strong>descendantes</strong> des balises &lt;html&gt; et &lt;head&gt; et plus précisément
+                            les <strong>enfants</strong> de la balise &lt;head&gt;.
+                        </li>
+                        <li>La balise &lt;body&gt; est le <strong>parent</strong> des balises &lt;p&gt;.</li>
+                        <li>Les balises &lt;p&gt; sont des balises <strong>sœurs</strong>. Elles sont les
+                            <strong>descendantes</strong> des balises &lt;html&gt; et &lt;body&gt; et plus précisément
+                            les <strong>enfants</strong> de la balise &lt;body&gt;.
+                        </li>
+                    </ul>
+                </article>
+                <div class="html_arbre_img">
+                    <a href="../assets/images/html_arbre.png" target="_blank">
+                        <img src="../assets/images/html_arbre.png" alt="arbre généalogique html">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="htmlGlossaire">
+            <h2>Glossaire</h2>
+            <article class="table_first_balise">
+                <h3>Balise de premier niveau</h3>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;html&gt;</strong></td>
+                        <td>Balise principale</t>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;head&gt;</strong></td>
+                        <td>En-tête de la page</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;body&gt;</strong></td>
+                        <td>Corps de la page</td>
+                    </tr>
+                </table>
+                <p>Les balises de premier niveau sont les principales balises qui structurent une page HTML. Elles sont
+                    indispensables pour réaliser le "code minimal" d'une page web.</p>
+            </article>
+            <article class="table_balise_tete">
+                <h3>Balise de premier niveau</h3>
+                <p>Ces balsises sont situées entre <strong>&lt;head&gt;</strong> et <strong>&lt;/head&gt;</strong></p>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;link&gt;</strong>
+                        </td>
+                        <td>Liaison avec une feuille de style <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;link&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;meta&gt;</strong></td>
+                        <td>
+                            Métadonnées de la page web (collections de caractères, mots-clés,etc.) <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;meta&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;script&gt;</strong></td>
+                        <td>Code JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;style&gt;</strong></td>
+                        <td>Code CSS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;title&gt;</strong></td>
+                        <td>Titre de la page</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_struct_text">
+                <h3>Balise de structuration du texte</h3>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;abbr&gt;</strong>
+                        </td>
+                        <td>Abréviation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;blocknote&gt;</strong></td>
+                        <td>Citation (longue)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;cite&gt;</strong></td>
+                        <td>Citation du titre d'une oeuvre ou d'un événement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;q&gt;</strong></td>
+                        <td>Citation (courte)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;sup&gt;</strong></td>
+                        <td>Exposant</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;strong&gt;</strong></td>
+                        <td>Mise en valeur forte</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;em&gt;</strong></td>
+                        <td>Mise en valeur normale</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;mark&gt;</strong></td>
+                        <td>Mise en valeur visuelle</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h1&gt;</strong></td>
+                        <td>Titre de niveau 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h2&gt;</strong></td>
+                        <td>Titre de niveau 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h3&gt;</strong></td>
+                        <td>Titre de niveau 3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h4&gt;</strong></td>
+                        <td>Titre de niveau 4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h5&gt;</strong></td>
+                        <td>Titre de niveau 5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;h6&gt;</strong></td>
+                        <td>Titre de niveau 6</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;img&gt;</strong></td>
+                        <td>Image <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;img&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;figure&gt;</strong></td>
+                        <td>Figure (image, code, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;figcaption&gt;</strong></td>
+                        <td>Description de la figure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;audio&gt;</strong></td>
+                        <td>Son</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;video&gt;</strong></td>
+                        <td>Vidéo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;source&gt;</strong></td>
+                        <td>Format source pour les balises <strong>&lt;audio&gt;</strong> et
+                            <strong>&lt;video&gt;</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;a&gt;</strong></td>
+                        <td>Lien hypertexte</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;br&gt;</strong></td>
+                        <td>Retour à la ligne <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;br&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;p&gt;</strong></td>
+                        <td>Paragraphe</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;hr&gt;</strong></td>
+                        <td>Ligne de séparation horizontale <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;hr&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;address&gt;</strong></td>
+                        <td>Adresse de contact</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;del&gt;</strong></td>
+                        <td>Texte supprimé</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;ins&gt;</strong></td>
+                        <td>Texte inséré</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;dfn&gt;</strong></td>
+                        <td>Définition</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;kbd&gt;</strong></td>
+                        <td>Saisie clavier</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;pre&gt;</strong></td>
+                        <td>Affichage formaté (pour les codes sources)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;progress&gt;</strong></td>
+                        <td>Barre de progression</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;time&gt;</strong></td>
+                        <td>Date ou heure</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_liste">
+                <h3>Balise de listes</h3>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;ul&gt;</strong>
+                        </td>
+                        <td>Liste à puces, non numérotée</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;ol&gt;</strong></td>
+                        <td>Liste numérotée</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;li&gt;</strong></td>
+                        <td>Elément de la liste à puces</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;dl&gt;</strong></td>
+                        <td>Liste de définitions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;dt&gt;</strong></td>
+                        <td>Terme à définir</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;dd&gt;</strong></td>
+                        <td>Définition du terme</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_tab">
+                <h3>Balise de tableau</h3>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;table&gt;</strong>
+                        </td>
+                        <td>Tableau</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;caption&gt;</strong></td>
+                        <td>Titre du tableau</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;li&gt;</strong></td>
+                        <td>Elément de la liste à puces</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;tr&gt;</strong></td>
+                        <td>Ligne du tableau</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;th&gt;</strong></td>
+                        <td>Cellule d'en-tête</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;td&gt;</strong></td>
+                        <td>Cellule</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;thead&gt;</strong></td>
+                        <td>Section de l'en-tête du tableau</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;tbody&gt;</strong></td>
+                        <td>Section du corps du tableau</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;tfoot&gt;</strong></td>
+                        <td>Section du pied du tableau</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_form">
+                <h3>Balise de formulaire</h3>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;form&gt;</strong>
+                        </td>
+                        <td>Formulaire</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;fieldset&gt;</strong></td>
+                        <td>Groupe de champs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;legend&gt;</strong></td>
+                        <td>Titre d'un groupe de champs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;label&gt;</strong></td>
+                        <td>Libellé d'un champ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;input&gt;</strong></td>
+                        <td>Champ de formulaire (texte, mot de passe, case à cocher, bouton, etc.) <br>
+                            <br>
+                            <span class="highlight">
+                                <strong>&lt;input&gt;</strong>
+                            </span>
+                            est une balise orpheline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;textarea&gt;</strong></td>
+                        <td>Zone de saisie multiligne</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;select&gt;</strong></td>
+                        <td>Liste déroulante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;option&gt;</strong></td>
+                        <td>Elément d'une lsite déroulante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;optgroup&gt;</strong></td>
+                        <td>Groupe d'éléments d'une liste déroulante</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_sect">
+                <h3>Balise sectionnantes</h3>
+                <p>Ces balises permettent de construire le squelette de notre site Web.</p>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;header&gt;</strong>
+                        </td>
+                        <td>En-tête</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;nav&gt;</strong></td>
+                        <td>Liens principaux de navigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;footer&gt;</strong></td>
+                        <td>Pied de page</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;section&gt;</strong></td>
+                        <td>Section de page</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;article&gt;</strong></td>
+                        <td>Article (contenu autonome)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;aside&gt;</strong></td>
+                        <td>Informations complémentaires</td>
+                    </tr>
+                </table>
+            </article>
+            <article class="table_balise_gen">
+                <h3>Balise génériques (ou universelles)</h3>
+                <p>Les balises génériques sont des balises qui n'ont pas de sens sémantique. En effet, toutes les autres
+                    balises HTML ont un sens(<strong>&lt;p&gt;</strong> signifie "paragraphe",
+                    <strong>&lt;h2&gt;</strong> signifie "sous-titre", etc). Parfois, on a besoin d'utiliser des balises
+                    génériques (aussi appelées <strong>balises universelles</strong>) car aucune des autres balises ne
+                    covient. <br>
+                    <br>
+                    Il y a deux balises génériques : l'une, de type <strong>inline</strong>, l'autre de type
+                    <strong>block</strong>.
+                </p>
+                <table>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>&lt;span&gt;</strong>
+                        </td>
+                        <td>Balise générique de type <strong>inline</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;div&gt;</strong></td>
+                        <td>Balise générique de type <strong>block</strong></td>
+                    </tr>
+                </table>
+                <p>Ces balise ont un intérêt uniquement si vous leur associez un attribut <strong>class</strong>,
+                    <strong>id</strong> ou <strong>style</strong>:
+                </p>
+                <ol>
+                    <li><strong>class</strong> indique le nom de la classe CSS à utiliser;</li>
+                    <li><strong>id</strong> donne un nom à la balise. Ce nom doit être unique sur toute la page car il
+                        permet d'identifier la balise. Vous pouvez vous servir de l'ID pour de nombreuses choses, par
+                        exemple pour créer un lien vers une ancre, pour un style CSS de type ID, pour des manipulations
+                        en JavaScript, etc.;</li>
+                    <li><strong>style</strong> indique directement le code CSS à appliquer. Vous n'êtes donc pas obligé
+                        d'avoir une feuille de style à part, vous pouvez mettre directement les attributs CSS. Notez
+                        qu'il est préférable de ne pas utiliser cet attribut, et de passer à la place par une feuille de
+                        style externe, car cela rend votre site plus facile à mettre à jour par la suite.</li>
+                </ol>
+                <p>Ces trois attributs ne sont pas réservés aux balises génériques: vous pouvez aussi les utiliser sans
+                    aucun problème dans la plupart des autres balises.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_lien">
+            <a class="logo_dev" href="../index.html">
+                <img class="logo_dev_img" src="../assets/images/logo_dev.png" alt="logo developpeur">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
