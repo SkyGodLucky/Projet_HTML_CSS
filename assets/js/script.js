@@ -1,13 +1,12 @@
 // MENU
-
 function openMenuMobile() {
-  document.querySelector(".header_nav").classList.add("open");
-  document.querySelector(".overlay_menu_mobile").classList.add("open");
+  document.getElementById('menu').style.display = 'block';
+  document.getElementById('overlay_menu_mobile').style.display = 'block';
 }
 
 function closeMenuMobile() {
-  document.querySelector(".header_nav").classList.remove("open");
-  document.querySelector(".overlay_menu_mobile").classList.remove("open");
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('overlay_menu_mobile').style.display = 'none';
 }
 
 //FORM

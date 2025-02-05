@@ -22,31 +22,18 @@
       </a>
     </h1>
     <nav class="header_nav">
-      <div class="header_nav_close" onclick="closeMenuMobile()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
+      <div class="burger-btn" onclick="openMenuMobile()">&#9776;</div>
+      <div class="menu" id="menu">
+        <div class="close-btn" onclick="closeMenuMobile()">&times;</div>
+        <ul>
+          <li><a href="../index.html">ACCUEIL</a></li>
+          <li><a href="../pages/HTML_explique.html">HTML</a></li>
+          <li><a href="../pages/CSS_explique.html">CSS</a></li>
+          <li><a href="../pages/JS_explique.html">JAVASCRIPT</a></li>
+          <li><a href="../pages/contact.html">CONTACT</a></li>
+        </ul>
       </div>
-      <ul class="header_nav_menu">
-        <li><a class="header_nav_menu_link" href="../index.html">ACCUEIL</a></li>
-        <li><a class="header_nav_menu_link" href="./HTML_explique.html">HTML</a></li>
-        <li><a class="header_nav_menu_link" href="./CSS_explique.html">CSS</a></li>
-        <li><a class="header_nav_menu_link" href="./JS_explique.html">JAVASCRIPT</a></li>
-        <li><a id="lien_contact" class="header_nav_menu_link" href="./contact.html">NOUS CONTACTER</a></li>
-      </ul>
     </nav>
-    <div class="header_burger" onclick="openMenuMobile()">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
-          <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
-          <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
-        </g>
-      </svg>
-    </div>
   </header>
 
   <main>
